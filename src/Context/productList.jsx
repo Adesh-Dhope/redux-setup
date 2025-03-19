@@ -19,7 +19,9 @@ setProductList(items)
 },[items])
 
   return (
-    <div>productList</div>
+    <div>
+      <h2>productList</h2>
+    </div>
   )
 }
 

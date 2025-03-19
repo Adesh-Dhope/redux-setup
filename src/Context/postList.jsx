@@ -16,7 +16,9 @@ console.log('postList',postList)
       setPostList(items[4])
     },[items])
   return (
-    <div>postSlice</div>
+    <div>
+      <h2>postSlice</h2>
+    </div>
   )
 }
 
