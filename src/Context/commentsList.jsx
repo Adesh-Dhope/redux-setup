@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchcomments } from '../redux/slices/CommentSlice';
+import { useNavigate } from 'react-router-dom';
 
 const CommentsList = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const {items }= useSelector((state => state.comments))
 
@@ -27,6 +29,8 @@ dispatch(fetchcomments())
     };
   return (
     <div>
+
+
         <h2 style={{textAlign:'center'}}>commentsList</h2>
 <div style={centeredStyle}>
   <table>
@@ -42,7 +46,7 @@ dispatch(fetchcomments())
     <tbody>
       {commentData.map((data, index)=>(
 
-      <tr>
+      <tr key={data.id} onClick={()=>{navigate(`/commentdashboard/${data.id}`)}}>
       <td style={{padding:"2px"}}>{index + 1}</td>
       <td style={{padding:"2px"}}>{data.user.username}</td>
       <td style={{padding:"2px"}}>{data.body}</td>

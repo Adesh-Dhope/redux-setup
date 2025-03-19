@@ -6,6 +6,8 @@ import TodoList from "./Context/TodoList";
 import PostList from "./Context/postList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import UserDashboard from "./Context/UserDashboard";
+import CommentDashboard from "./Dashboards/CommentDashboard";
 
 
 
@@ -19,6 +21,8 @@ function App() {
              <Route path='/post' element={<PostList />}></Route>
              <Route path='/todos' element={<TodoList />}></Route>
              <Route path='/user' element={<UserList />}></Route>
+             <Route path="/dashboard/:id" element={<UserDashboard />}></Route>
+             <Route path="/commentdashboard/:id" element={<CommentDashboard />} ></Route>
          </Routes>
          </Router>
    </Provider>
