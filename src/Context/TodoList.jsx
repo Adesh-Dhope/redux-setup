@@ -15,10 +15,39 @@ console.log('todoData',todoData)
     useEffect(()=>{
 setTodoData(items)
     },[items])
+
+    const centeredStyle = {
+      display: "flex",
+      justifyContent: "center", // Centers horizontally
+      alignItems: "center", // Centers vertically
+      height: "100vh", // Full viewport height
+      marginTop:"5em"
+    };
   return (
     <div>
-      <h2>TodoList</h2>
+      <h2 style={{textAlign:'center'}}>TodoList</h2>
 
+<div style={centeredStyle}>
+  <table>
+    <thead>
+      <tr>
+        <th style={{padding:"2px"}}>Sr.No</th>
+        <th style={{padding:"2px"}}>Todo</th>
+        <th style={{padding:"2px"}}>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {todoData.map((data, index)=>(
+
+      <tr>
+        <td style={{padding:"2px"}}>{index + 1}</td>
+        <td style={{padding:"2px"}}>{data.todo}</td>
+        <td style={{padding:"2px"}}>{data.completed ? "Done" : "In Progress"}</td>
+      </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
     </div>
   )
 }

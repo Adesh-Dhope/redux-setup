@@ -19,10 +19,45 @@ console.log('userList',userList)
   if (loading) return <p>Loading users...</p>;
   if (error) return <p>Error: {error}</p>;
 
+  const centeredStyle = {
+    display: "flex",
+    justifyContent: "center", // Centers horizontally
+    alignItems: "center", // Centers vertically
+    height: "100vh", // Full viewport height
+    marginTop:"5em",
+    paddingBottom:"6em",
+  };
+
   return (
     <div>
-      <h2>User List</h2>
+      <h2 style={{textAlign:'center'}}>User List</h2>
      
+     <div style={centeredStyle}>
+         <table>
+          <thead>
+            <tr>
+              <th style={{padding:"2px"}}>Sr.No</th>
+              <th style={{padding:"2px"}}>Username</th>
+              <th style={{padding:"2px"}}>Department</th>
+              <th style={{padding:"2px"}}>Position</th>
+              <th style={{padding:"2px"}}>Role</th>
+              <th style={{padding:"2px"}}>Contact Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            {userList.map((data, index)=>(
+              <tr>
+                <td style={{padding:"2px"}}>{index + 1}</td>
+                <td style={{padding:"2px"}}>{data.username}</td>
+                <td style={{padding:"2px"}}>{data.company.department}</td>
+                <td style={{padding:"2px"}}>{data.company.title}</td>
+                <td style={{padding:"2px"}}>{data.role}</td>
+                <td style={{padding:"2px"}}>{data.phone}</td>
+              </tr>
+            ))}
+          </tbody>
+         </table>
+     </div>
     </div>
   );
 };

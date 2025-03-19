@@ -13,11 +13,46 @@ dispatch(fetchpost())
     const [postList, setPostList] = useState([]);
 console.log('postList',postList)
     useEffect(()=>{
-      setPostList(items[4])
-    },[items])
+      setPostList(items)
+    },[items]);
+
+    const centeredStyle = {
+      display: "flex",
+      justifyContent: "center", // Centers horizontally
+      alignItems: "center", // Centers vertically
+      height: "100vh", // Full viewport height
+      marginTop:"5em"
+    };
+
   return (
     <div>
-      <h2>postSlice</h2>
+      <h2 style={{textAlign:'center'}}>postSlice</h2>
+
+      <div style={centeredStyle}>
+<table>
+  <thead>
+    <tr>
+      <th>Sr. No</th>
+      <th>Title</th>
+      <th>Likes</th>
+      <th>Dislikes</th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    {postList.map((data, index)=>(
+
+    <tr>
+      <td>{index + 1}</td>
+      <td>{data.title}</td>
+      <td>{data.reactions.likes}</td>
+      <td>{data.reactions.dislikes}</td>
+      <td>{data.tags.join(",")}</td>
+    </tr>
+    ))}
+  </tbody>
+</table>
+      </div>
     </div>
   )
 }

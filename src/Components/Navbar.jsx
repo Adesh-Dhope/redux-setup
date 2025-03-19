@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
            <nav>
-                <ul style={{display:"flex", justifyContent:"space-between"}}>
+                <ul style={{display:"flex", justifyContent:"space-around"}}>
                     <li><Link to="/comments">Comments</Link></li>
                     <li><Link to="/todos">Todos</Link></li>
                     <li><Link to="/post">Posts</Link></li>

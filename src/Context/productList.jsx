@@ -20,7 +20,7 @@ setProductList(items)
 
   return (
     <div>
-      <h2>productList</h2>
+      <h2 style={{textAlign:'center'}}>productList</h2>
     </div>
   )
 }
