@@ -31,18 +31,18 @@ setTodoData(items)
   <table>
     <thead>
       <tr>
-        <th style={{padding:"2px"}}>Sr.No</th>
-        <th style={{padding:"2px"}}>Todo</th>
-        <th style={{padding:"2px"}}>Status</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Sr.No</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Todo</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Status</th>
       </tr>
     </thead>
     <tbody>
       {todoData.map((data, index)=>(
 
       <tr>
-        <td style={{padding:"2px"}}>{index + 1}</td>
-        <td style={{padding:"2px"}}>{data.todo}</td>
-        <td style={{padding:"2px"}}>{data.completed ? "Done" : "In Progress"}</td>
+        <td style={{padding:"2px" , textAlign:"start"}}>{index + 1}</td>
+        <td style={{padding:"2px" , textAlign:"start"}}>{data.todo}</td>
+        <td style={{padding:"2px" , textAlign:"start"}}>{data.completed ? "Done" : "In Progress"}</td>
       </tr>
       ))}
     </tbody>

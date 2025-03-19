@@ -36,23 +36,23 @@ console.log('userList',userList)
          <table>
           <thead>
             <tr>
-              <th style={{padding:"2px"}}>Sr.No</th>
-              <th style={{padding:"2px"}}>Username</th>
-              <th style={{padding:"2px"}}>Department</th>
-              <th style={{padding:"2px"}}>Position</th>
-              <th style={{padding:"2px"}}>Role</th>
-              <th style={{padding:"2px"}}>Contact Info</th>
+              <th style={{padding:"2px" , textAlign:"start"}}>Sr.No</th>
+              <th style={{padding:"2px" , textAlign:"start"}}>Username</th>
+              <th style={{padding:"2px", textAlign:"start"}}>Department</th>
+              <th style={{padding:"2px", textAlign:"start"}}>Position</th>
+              <th style={{padding:"2px", textAlign:"start"}}>Role</th>
+              <th style={{padding:"2px", textAlign:"start"}}>Contact Info</th>
             </tr>
           </thead>
           <tbody>
             {userList.map((data, index)=>(
               <tr>
-                <td style={{padding:"2px"}}>{index + 1}</td>
-                <td style={{padding:"2px"}}>{data.username}</td>
-                <td style={{padding:"2px"}}>{data.company.department}</td>
-                <td style={{padding:"2px"}}>{data.company.title}</td>
-                <td style={{padding:"2px"}}>{data.role}</td>
-                <td style={{padding:"2px"}}>{data.phone}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{index + 1}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{data.username}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{data.company.department}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{data.company.title}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{data.role}</td>
+                <td style={{padding:"2px", textAlign:"start"}}>{data.phone}</td>
               </tr>
             ))}
           </tbody>

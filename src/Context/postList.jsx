@@ -32,22 +32,22 @@ console.log('postList',postList)
 <table>
   <thead>
     <tr>
-      <th>Sr. No</th>
-      <th>Title</th>
-      <th>Likes</th>
-      <th>Dislikes</th>
-      <th>Tags</th>
+      <th style={{padding:"2px" , textAlign:"start"}}>Sr. No</th>
+      <th style={{padding:"2px" , textAlign:"start"}}>Title</th>
+      <th style={{padding:"2px" , textAlign:"start"}}>Likes</th>
+      <th style={{padding:"2px" , textAlign:"start"}}>Dislikes</th>
+      <th style={{padding:"2px" , textAlign:"start"}}>Tags</th>
     </tr>
   </thead>
   <tbody>
     {postList.map((data, index)=>(
 
     <tr>
-      <td>{index + 1}</td>
-      <td>{data.title}</td>
-      <td>{data.reactions.likes}</td>
-      <td>{data.reactions.dislikes}</td>
-      <td>{data.tags.join(",")}</td>
+      <td style={{padding:"2px" , textAlign:"start"}}>{index + 1}</td>
+      <td style={{padding:"2px" , textAlign:"start"}}>{data.title}</td>
+      <td style={{padding:"2px" , textAlign:"start"}}>{data.reactions.likes}</td>
+      <td style={{padding:"2px" , textAlign:"start"}}>{data.reactions.dislikes}</td>
+      <td style={{padding:"2px" , textAlign:"start"}}>{data.tags.join(",")}</td>
     </tr>
     ))}
   </tbody>

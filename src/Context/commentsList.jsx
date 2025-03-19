@@ -32,11 +32,11 @@ dispatch(fetchcomments())
   <table>
     <thead>
       <tr>
-        <th style={{padding:"2px"}}>Sr.No</th>
-        <th style={{padding:"2px"}}>User</th>
-        <th style={{padding:"2px"}}>Comment</th>
-        <th style={{padding:"2px"}}>Likes</th>
-        <th style={{padding:"2px"}}>Full Name</th>
+        <th style={{padding:"2px", textAlign:"start"}}>Sr.No</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>User</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Comment</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Likes</th>
+        <th style={{padding:"2px" , textAlign:"start"}}>Full Name</th>
       </tr>
     </thead>
     <tbody>
